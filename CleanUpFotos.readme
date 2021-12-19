@@ -1,0 +1,10 @@
+for f in $(find ./ -name *icasa.ini ); do rm "$f"; done
+
+for f in $(find ./ -name *.DS_Store ); do rm "$f"; done
+
+head -n'%Y-%m-%d %f' *.JPG
+
+for n in 01 02 03 04 05 06 07 08 09 11 12 10; do mv 2009-"$n"-* /media/mika/nas/Photos/2009/2009-"$n"; done
+
+
+find . -type f | grep -vE '20[0-9]{2,2}-.*'
